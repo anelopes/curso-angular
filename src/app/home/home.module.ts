@@ -6,6 +6,8 @@ import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
 import { SignUpComponent } from './signup/signup.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home.routing.module';
+import { SignUpService } from './signup/signup.service';
 
 @NgModule({
     declarations: [
@@ -18,8 +20,10 @@ import { HomeComponent } from './home.component';
         FormsModule,
         ReactiveFormsModule,
         VMessageModule,
-        RouterModule
-    ]
+        RouterModule,
+        HomeRoutingModule
+    ],
+    providers: [SignUpService]
 })
 export class HomeModule {
 
